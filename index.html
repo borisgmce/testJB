@@ -1,1 +1,78 @@
+<html lang="en">
+
+  <body id="colors">
+    <div
+      style="background-image: url(https://c4.wallpaperflare.com/wallpaper/845/312/843/field-grass-markup-lawn-wallpaper-preview.jpg);" 
+
+      
+    >
+      <!-- buttons -->
+      <div>
+        <a
+          href="target.html"
+          id="yellow"
+          onclick="applyColor(this.id)"
+          style="background-color: yellow"
+          >Next Page Yellow</a
+        >
+      </div>
+      <br />
+      <div>
+        <a
+          href="target.html"
+          id="pink"
+          onclick="applyColor(this.id)"
+          style="background-color: pink"
+          >Next Page Pink</a
+        >
+      </div>
+      <br />
+      <div>
+        <button
+          id="red"
+          onclick="applyColor(this.id)"
+          style="background-color: red"
+        >
+          Next Page Red
+        </button>
+      </div>
+      <br />
+      <div>
+        <button
+          id="blue"
+          onclick="applyColor(this.id)"
+          style="background-color: blue"
+        >
+          Next Page Blue
+        </button>
+      </div>
+    </div>
+    <script>
+      // apply color func
+      function applyColor(clicked_id) {
+        switch (clicked_id) {
+          case "blue":
+            colors.value = "blue";
+            break;
+          case "red":
+            colors.value = "red";
+            break;
+          case "yellow":
+            colors.value = "yellow";
+            break;
+          case "pink":
+            colors.value = "pink";
+            break;
+
+          default:
+            break;
+        }
+
+        localStorage.setItem("colors", colors.value);
+        console.log(`colors value is ${colors.value}`);
+        window.location.href = "target.html";
+      }
+    </script>
+  </body>
+</html>
 
